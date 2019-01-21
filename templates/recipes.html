@@ -1,9 +1,8 @@
 {% extends 'base.html'%} {% block content %}
 <div id="sorting-bar" class="row #00695c teal lighten-3">
-    <h4 class="art-deco-font col s3 m3">Whats for Dinner!</h4>
-    <a id="sort-by-meal-type-button" class="waves-effect waves-light btn white col s4 m2"><i class="fas fa-align-justify"></i> Sort by Meal Type</a>
-    <a id="sort-by-rating-button" class="waves-effect waves-light btn white col s4 m2"><i class="far fa-grin-stars"></i> Sort by Rating</a>
-    <a id="sort-by-date-button" class="waves-effect waves-light btn white col s4 m2"><i class="far fa-thumbs-up"></i> See Newest First</a>
+    <a id="sort-by-meal-type-button" class="waves-effect waves-light btn-large white col s12 m4"><i class="fas fa-filter"></i> Filter</a>
+    <a id="sort-by-rating-button" class="waves-effect waves-light btn-large white col s12 m4"><i class="far fa-grin-stars"></i> Sort by Rating</a>
+    <a id="sort-by-date-button" class="waves-effect waves-light btn-large white col s12 m4"><i class="fas fa-file-alt"></i> See Newest First</a>
     
 </div>
 
@@ -14,11 +13,11 @@
             <div class="card">
                 <div class="card-image">
                     <img src="{{recipe.recipe_image_url}}" width="400" height="200">
-                    <div class="card-title card-title-spice">
-                        <span id="recipe_name" name="recipe_name" class="card-title art-deco-font">{{recipe.recipe_name}}</span>
-                    </div>
                 </div>
                 <div class="card-content class-size">
+                    <div class="card-title card-title-spice">
+                        <span id="recipe_name" name="recipe_name" class="card-title super-font center-align">{{recipe.recipe_name}}</span>
+                    </div>
                     <p id="description">{{recipe.recipe_description}}</p>
                 </div>
               
@@ -31,7 +30,7 @@
     {% endfor %} 
     </div>
     <div id="load-more-spice">
-        <a id="loadMore" class="btn-small center #880e4f pink darken-3">Load More <i class="fas fa-plus fa-xs"></i></a>
+        <a id="loadMore" class="btn-small center #00b8d4 cyan accent-4">Load More <i class="fas fa-angle-down"></i></a>
     </div>
 <!-- Below, the script containing the sorting options for the recipes -->
 <script>

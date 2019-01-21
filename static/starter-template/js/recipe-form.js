@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
     // Activates the carousel on the homepage
     $('.carousel.carousel-slider').carousel({
@@ -111,14 +110,7 @@ $(document).ready(function(){
         }
         
         
-        // Getting the vegan boolean
-        var is_vegan = $('#is_vegan').val();
-        if (!is_vegan) {
-            alert('Please indicate if the recipe is vegan or not');
-            $('#is_vegan').focus();
-            return;
-        }
-             // Getting the recipe ingredients
+        // Getting the recipe ingredients
         var ingredients = [];
         var inputTagIngredient = ($('#ingredient-adder').find('input'));
         // console.log('inputTagIngredient', inputTagIngredient);
@@ -172,15 +164,6 @@ $(document).ready(function(){
         // Getting the key values -END
         // console.log('steps: ', steps);
         
-        // Getting the meal type selector
-        var meal_type = $('#meal_type').val();
-        // console.log("Meal type is: ", mealTypeSelector);
-        // Getting the base ingredient
-        var base_ingredient = $('#base_ingredient').val();
-        // console.log("Base Ingredient is: ", baseIngredientSelector);
-        // Getting the flavour
-        var flavour = $('#flavour').val();
-        // console.log("flavour is: ", flavourSelector);
         // Getting the author name
         var author_name = $('#author_name').val();
         // console.log("author_name: ", author_name);
@@ -193,25 +176,23 @@ $(document).ready(function(){
         // Getting the initial number of views
         var number_of_views = "0";
         
-        var formData = ['form data includes: ',recipe_name, recipe_url, recipe_image_url, author_name, meal_type, base_ingredient, flavour, date_added,
-                        recipe_description, is_vegan, 
-                        ingredients, steps];
+        var formData = ['form data includes: ',recipe_name, recipe_url, recipe_image_url, author_name, date_added,
+                        recipe_description, ingredients, steps];
         console.log(formData);
         
         // This will take care of the POST for the add recipe form
         $.ajax({
             url: formUrl,
             // data: {'data': steps},
-            data: JSON.stringify({recipe_name, recipe_url, recipe_image_url, author_name, meal_type, base_ingredient, flavour, date_added,
-                        recipe_description, is_vegan, 
-                        ingredients, steps}, 
+            data: JSON.stringify({recipe_name, recipe_url, recipe_image_url, author_name, date_added,
+                        recipe_description, ingredients, steps}, 
         null, '\t'),
             type: 'POST',
             contentType: 'application/json;charset=UTF-8',
             success: function(response) {
                 console.log('success');
                 // PENDING - The address is hardcoded, update before deployment
-                window.location.href = "http://code-institute-milestone-project-04-pierceoneill.c9users.io/get_my_recipes";
+                window.location.href="https://book-of-tastes-ricardo13.c9users.io/get_my_recipes";
             },
             error: function(error) {
                 console.log('error', error);
