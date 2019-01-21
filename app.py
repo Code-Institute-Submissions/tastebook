@@ -15,7 +15,7 @@ from functools import update_wrapper
 app = Flask(__name__)
 app.config['TESTING'] = True
 app.testing = True
-app.secret_key = "daddy_day"
+app.config['SECRET_KEY'] = "Your_secret_string"
 
 app.config["MONGO_DBNAME"] = 'cookbook'
 app.config["MONGO_URI"] = 'mongodb://admin:cfrbuzesti13@ds247270.mlab.com:47270/cookbook'
@@ -132,9 +132,6 @@ def get_add_recipe_form():
         request.url = request.url.replace('http://', 'https://', 1)
     print('url when get_add_recipe_form: ', request.url)
     return render_template('addrecipe.html',
-                           flavour=mongo.db.flavour.find(),
-                           meal_type=mongo.db.meal_type.find(),
-                           base_ingredient=mongo.db.base_ingredient.find(),
                            unit_measurement=mongo.db.unit_measurement.find(),
                            author_name=mongo.db.author_name.find())
 
@@ -170,22 +167,12 @@ def update_edited_recipe(recipe_id):
     {
         'recipe_name': request.form.get['recipe_name'],
         'recipe_description': request.form.get['recipe_description'],
-        'flavour': request.form.get['flavour'],
-        'meal_type': request.form.get['meal_type'],
-        'base_ingredient': request.form.get['base_ingredient'],
         'recipe_image_url': request.form.get['recipe_image_url'],
-        'is_vegan': request.form.get['is_vegan'],
         'ingredients': request.form.get['ingredients'],
         'steps': request.form.get['steps'],
         'author_name': request.form.get['author_name']
     }
     return redirect(url_for('get_my_recipes'))
-
-@app.route('/contact')
-def contact():
-    '''Routing view to render/call contact.html in browser'''
-    return render_template("contact.html")
-
 
 
 
