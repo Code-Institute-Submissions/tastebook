@@ -26,6 +26,10 @@
     margin-right: 1em; 
 }
 
+.plus-container {
+  min-height: 37em;
+}
+
 .super-font {
     font-family: 'Merienda', cursive;
 }
@@ -245,21 +249,6 @@ a {
     font-size: 2em!important;
     transform: translate(10em, 15em);
     z-index: 1;
-}
-
-
-.dc-chart th {
-    text-align: left
-}
-.dc-chart th,.dc-chart td {
-  padding-left: 10px;
-}
-.dc-chart tr.dc-table-group td {
-  padding-top: 4px;
-  border-bottom: 1px solid black;
-}
-.dc-chart select {
-  width: 150px;
 }
 
 #selector-container > div > select {

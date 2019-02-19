@@ -27,10 +27,6 @@
     <!--jQuery and Ajax -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js "></script>
 
-    <!-- D3, Crossfilter and DC and dashboard -->
-    <script type="text/javascript" src="{{url_for('static', filename='assets/d3.min.js')}}"></script>
-    <script type="text/javascript" src="{{url_for('static', filename='assets/crossfilter.js')}}"></script>
-    <script type="text/javascript" src="{{url_for('static', filename='assets/dc.js')}}"></script>
     <script type="text/javascript" src="{{url_for('static', filename='starter-template/js/queue.min.js')}}"></script>
 
     <!-- Materialize -->
@@ -64,7 +60,7 @@
         </div>
     </nav>
 
-    <div class="container">
+    <div class="container plus-container">
         {% block content %} {% endblock %}
     </div>
 
