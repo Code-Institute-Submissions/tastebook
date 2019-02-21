@@ -1,22 +1,3 @@
-/* Custom Stylesheet */
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
-
-
-
-
-/* GENERAL */
-.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-	font-size: inherit;
-}
-
 .no-margin {
     margin: 0;
     padding: 0;
@@ -27,7 +8,7 @@
 }
 
 .plus-container {
-  min-height: 37em;
+  min-height: 39em;
 }
 
 .super-font {
@@ -60,19 +41,14 @@
 }
 
 
-/* NAV BAR */
-
 a {
   color: #c2185b;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
 }
 
-/* SECTIONS */
 
-
-
-/* FORMS */
+/* Forms */
 .float-right {
     float: right;
 }
@@ -85,7 +61,7 @@ a {
     margin-left: 1em;
 }
 
-/* ALL Recipes */
+/* All Recipes */
 
 .class-size {
     height: 9em;
@@ -143,7 +119,7 @@ a {
     color: #00695c;
 }
 
-/* USER RECIPES */
+/* User Recipes */
 
 .add-recipe-box {
     margin-top: 2em;
@@ -169,7 +145,7 @@ a {
     font-size: 2em;
 }
 
-#my-recpe-description {
+#my-recipe-description {
     margin-top: 1em;
 }
 
@@ -281,9 +257,6 @@ a {
 }
 
 
-
-/* MEDIA QUERIES */
-
 @media (max-width:415px) {
     .mobile-hide {
         display: none!important;
@@ -347,13 +320,6 @@ p {
   }
 }
 
-.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-  font-size: inherit;
-}
-
 footer.page-footer {
   margin: 0;
 }
@@ -369,19 +335,6 @@ a:hover {
   color: #4db6ac;
 }
 
-pre {
-display: block;
-padding: 9.5px;
-margin: 0 0 10px;
-font-size: 13px;
-line-height: 1.42857143;
-color: #333;
-word-break: break-all;
-word-wrap: break-word;
-background-color: #F5F5F5;
-border: 1px solid #CCC;
-border-radius: 4px;
-}
 
 .header {
   padding:20px 0;
@@ -426,49 +379,11 @@ border-radius: 4px;
   margin-top: 0;
 }
 
-
-/* Rating Star Widgets Style */
-.rating-stars ul {
-  list-style-type:none;
-  padding:0;
-  
-  -moz-user-select:none;
-  -webkit-user-select:none;
-}
-.rating-stars ul > li.star {
-  display:inline-block;
-  
-}
-
-/* Idle State of the stars */
-.rating-stars ul > li.star > i.fa {
-  font-size:1.5em; /* Change the size of the stars */
-  color:#ccc; /* Color on idle state */
-}
-
-/* Hover state of the stars */
-.rating-stars ul > li.star.hover > i.fa {
-  color:#FFCC36;
-}
-
-/* Selected state of the stars */
-.rating-stars ul > li.star.selected > i.fa {
-  color:#FF912C;
-}
-
-
 .icon-block {
   padding: 0 15px;
 }
 .icon-block .material-icons {
 	font-size: inherit;
-}
-
-pre{
-      padding: 16px 20px 0px;
-    background: #eee;
-    border: 1px solid #ddd;
-    border-radius: 4px;
 }
 
 .info{
